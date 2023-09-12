@@ -1,0 +1,13 @@
+1:
+    identifier: WALL-1
+    x: 3
+    y: 5
+    orientation: HORIZONTAL
+    size: 10
+
+2:
+    identifier: WALL-2
+    x: 8
+    y: 10
+    orientation: VERTICAL
+    size: 12
