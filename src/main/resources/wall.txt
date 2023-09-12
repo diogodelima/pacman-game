@@ -1,13 +1,97 @@
 1:
     identifier: WALL-1
-    x: 3
-    y: 5
+    x: 0
+    y: 0
     orientation: HORIZONTAL
-    size: 10
+    size: 80
 
 2:
     identifier: WALL-2
-    x: 8
-    y: 10
+    x: 0
+    y: 0
     orientation: VERTICAL
-    size: 12
+    size: 45
+
+3:
+    identifier: WALL-3
+    x: 0
+    y: 44
+    orientation: HORIZONTAL
+    size: 80
+
+4:
+    identifier: WALL-4
+    x: 79
+    y: 0
+    orientation: VERTICAL
+    size: 45
+
+5:
+    identifier: WALL-5
+    x: 6
+    y: 6
+    orientation: VERTICAL
+    size: 33
+
+6:
+    identifier: WALL-6
+    x: 13
+    y: 6
+    orientation: HORIZONTAL
+    size: 15
+
+7:
+    identifier: WALL-7
+    x: 13
+    y: 6
+    orientation: VERTICAL
+    size: 14
+
+8:
+    identifier: WALL-9
+    x: 13
+    y: 38
+    orientation: HORIZONTAL
+    size: 15
+
+9:
+    identifier: WALL-8
+    x: 13
+    y: 25
+    orientation: VERTICAL
+    size: 14
+
+10:
+    identifier: WALL-10
+    x: 73
+    y: 6
+    orientation: VERTICAL
+    size: 33
+
+11:
+    identifier: WALL-11
+    x: 52
+    y: 6
+    orientation: HORIZONTAL
+    size: 15
+
+12:
+    identifier: WALL-12
+    x: 52
+    y: 38
+    orientation: HORIZONTAL
+    size: 15
+
+13:
+    identifier: WALL-13
+    x: 66
+    y: 6
+    orientation: VERTICAL
+    size: 14
+
+14:
+    identifier: WALL-14
+    x: 66
+    y: 25
+    orientation: VERTICAL
+    size: 14

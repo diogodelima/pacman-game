@@ -2,6 +2,7 @@ package pt.dioguin;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
+import pt.dioguin.model.gameboard.GameBoard;
 import pt.dioguin.model.wall.loader.WallLoader;
 import pt.dioguin.model.wall.service.WallFoundationService;
 import pt.dioguin.model.wall.service.WallService;
@@ -9,9 +10,9 @@ import pt.dioguin.model.wall.service.WallService;
 import java.io.File;
 import java.util.Objects;
 
-@Getter
 public class Pacman {
 
+    @Getter
     private static WallFoundationService wallService;
 
     @SneakyThrows
@@ -21,6 +22,7 @@ public class Pacman {
         wallService = new WallService();
         new WallLoader(wallConfig).setup().forEach(wallService::put);
 
+        new GameBoard();
     }
 
 }
