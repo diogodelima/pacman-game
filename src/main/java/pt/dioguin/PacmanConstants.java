@@ -14,9 +14,10 @@ public class PacmanConstants {
     public final static int CELL_SIZE = 20;
     public static final int NUM_CELLS_X = WINDOW_WIDTH / CELL_SIZE;
     public static final int NUM_CELLS_Y = WINDOW_HEIGHT / CELL_SIZE;
-    public static final Color BORDER_COLOR = new Color(255, 255, 255);
+    public static final Color BORDER_COLOR = new Color(40, 40, 40);
     public final static Color WALL_COLOR = new Color(3, 14, 61);
     public final static Color BACKGROUND_COLOR = new Color(0, 0, 0);
     public final static Color PLAYER_COLOR = Color.YELLOW;
+    public final static Color END_GAME = Color.RED;
 
 }

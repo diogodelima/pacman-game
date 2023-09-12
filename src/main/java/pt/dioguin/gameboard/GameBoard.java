@@ -20,11 +20,9 @@ import java.util.stream.IntStream;
 
 public class GameBoard {
 
-    private final JFrame frame;
-
     public GameBoard(){
 
-        frame = new JFrame("Pacman");
+        JFrame frame = new JFrame("Pacman");
 
         GenerateGamePanel gamePanel = new GenerateGamePanel();
         frame.setSize(PacmanConstants.WINDOW_WIDTH + PacmanConstants.CELL_SIZE, PacmanConstants.WINDOW_HEIGHT + PacmanConstants.CELL_SIZE * 2);
@@ -43,7 +41,7 @@ public class GameBoard {
 
                 if (checkCollision(player)){
                     this.cancel();
-                    endGame();
+                    endGame(gamePanel);
                 }
             }
         }, 0, 250L);
@@ -51,10 +49,24 @@ public class GameBoard {
 
     }
 
-    private void endGame(){
+    private void endGame(JPanel panel){
 
+        JLabel label = new JLabel("GAME OVER D;");
+        panel.setLayout(new GridBagLayout());
 
+        label.setFont(new Font("Arial", Font.PLAIN, 36));
+        label.setForeground(PacmanConstants.END_GAME);
 
+        GridBagConstraints constraints = new GridBagConstraints();
+        constraints.gridx = 0;
+        constraints.gridy = 0;
+        constraints.weightx = 1.0;
+        constraints.weighty = 1.0;
+        constraints.fill = GridBagConstraints.CENTER;
+
+        panel.add(label, constraints);
+        panel.revalidate();
+        panel.repaint();
     }
 
     private void changePlayerPoint(Player player){
