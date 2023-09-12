@@ -2,7 +2,8 @@ package pt.dioguin;
 
 import lombok.Getter;
 import lombok.SneakyThrows;
-import pt.dioguin.model.gameboard.GameBoard;
+import pt.dioguin.gameboard.GameBoard;
+import pt.dioguin.model.player.Player;
 import pt.dioguin.model.wall.loader.WallLoader;
 import pt.dioguin.model.wall.service.WallFoundationService;
 import pt.dioguin.model.wall.service.WallService;
@@ -14,6 +15,8 @@ public class Pacman {
 
     @Getter
     private static WallFoundationService wallService;
+    @Getter
+    private static Player player;
 
     @SneakyThrows
     public static void main(String[] args) {
@@ -21,6 +24,8 @@ public class Pacman {
         File wallConfig = new File(Objects.requireNonNull(Thread.currentThread().getContextClassLoader().getResource("wall.txt")).getFile());
         wallService = new WallService();
         new WallLoader(wallConfig).setup().forEach(wallService::put);
+
+        player = new Player(PacmanConstants.INITIAL_POINT, PacmanConstants.INITIAL_DIRECTION, true);
 
         new GameBoard();
     }
