@@ -121,6 +121,17 @@ public class GameBoard {
 
             setupWalls(g);
             drawPlayer((Graphics2D) g, Pacman.getPlayer());
+            setupGhost(g);
+        }
+
+        private void setupGhost(Graphics g){
+
+            int x = 15 * PacmanConstants.CELL_SIZE + 1;
+            int y = 15 * PacmanConstants.CELL_SIZE + 1;
+            ImageIcon icon = new ImageIcon(getClass().getResource("/ghost.png"));
+            icon = new ImageIcon(icon.getImage().getScaledInstance(PacmanConstants.CELL_SIZE, PacmanConstants.CELL_SIZE, Image.SCALE_SMOOTH));
+            icon.paintIcon(this, g, x, y);
+
         }
 
         private void setupWalls(Graphics g){
